@@ -1,0 +1,205 @@
+# 📱 Electronic Device Shopping Cart
+
+## 📌 Project Description
+
+This project is an **Electronic Device Shopping Cart System** built using **Object-Oriented Programming (OOP)** principles in Python.
+
+The system allows customers to:
+
+* Browse electronic devices
+* Add devices to a shopping cart
+* Remove items from the cart
+* Apply checkout
+* Automatically update stock
+
+The project demonstrates:
+
+* Inheritance
+* Polymorphism
+* Encapsulation
+* Object interaction
+* Menu-driven console application
+
+---
+
+## 🏗️ System Design
+
+### 🔹 Base Class: `Device`
+
+Common attributes for all devices:
+
+* `name`
+* `price`
+* `stock`
+* `warranty_period`
+
+Common methods:
+
+* `display_info()`
+* `apply_discount()`
+* `is_available()`
+* `reduce_stock()`
+* `__str__()`
+
+---
+
+### 📱 Smartphone (inherits from Device)
+
+Additional attributes:
+
+* `screen_size`
+* `battery_life`
+
+Additional methods:
+
+* `make_call()`
+* `install_app()`
+
+---
+
+### 💻 Laptop (inherits from Device)
+
+Additional attributes:
+
+* `ram_size`
+* `processor_speed`
+
+Additional methods:
+
+* `run_program()`
+* `use_keyboard()`
+
+---
+
+### 📲 Tablet (inherits from Device)
+
+Additional attributes:
+
+* `screen_resolution`
+* `weight`
+
+Additional methods:
+
+* `browse_internet()`
+* `use_touchscreen()`
+
+---
+
+### 🛒 Cart Class
+
+Attributes:
+
+* `items`
+* `total_price`
+
+Methods:
+
+* `add_device()`
+* `remove_device()`
+* `get_total_price()`
+* `print_items()`
+* `checkout()`
+
+---
+
+## 📊 UML Class Diagram
+
+```
+Device
+ ├── name
+ ├── price
+ ├── stock
+ ├── warranty_period
+ ├── display_info()
+ ├── apply_discount()
+ ├── is_available()
+ └── reduce_stock()
+
+Smartphone (Device)
+ ├── screen_size
+ ├── battery_life
+ ├── make_call()
+ └── install_app()
+
+Laptop (Device)
+ ├── ram_size
+ ├── processor_speed
+ ├── run_program()
+ └── use_keyboard()
+
+Tablet (Device)
+ ├── screen_resolution
+ ├── weight
+ ├── browse_internet()
+ └── use_touchscreen()
+
+Cart
+ ├── items
+ ├── total_price
+ ├── add_device()
+ ├── remove_device()
+ ├── get_total_price()
+ ├── print_items()
+ └── checkout()
+```
+
+---
+
+## 🚀 How to Run the Program
+
+1. Install **Python 3.x**
+2. Download the project
+3. Open terminal in project folder
+4. Run:
+
+```
+python main.py
+```
+
+---
+
+## 💻 Program Menu
+
+When running, the user sees:
+
+```
+1. Show Devices
+2. Show Cart
+3. Checkout
+4. Exit
+```
+
+---
+
+## 🧪 Sample Run
+
+```
+====== ELECTRONIC STORE ======
+1. Show Devices
+2. Show Cart
+3. Checkout
+4. Exit
+
+Choose option: 1
+
+1. iPhone 14 | Price: $999 | Stock: 10 | Warranty: 24 months | Screen: 6.1" | Battery: 20h
+2. Samsung S23 | Price: $899 | Stock: 15 | Warranty: 24 months | Screen: 6.5" | Battery: 22h
+...
+
+Select device number to add: 1
+Enter quantity: 2
+
+2 x iPhone 14 added to cart.
+```
+
+Checkout example:
+
+```
+===== RECEIPT =====
+iPhone 14 x 2
+Total paid: $1998
+Purchase successful!
+```
+
+
+
